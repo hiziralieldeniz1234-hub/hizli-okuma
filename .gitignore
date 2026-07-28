@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+
+# Yerel editör/araç ayarları
+.claude/
+
+# Capacitor (2. aşamada eklenecek)
+android/
+ios/
+.gradle/

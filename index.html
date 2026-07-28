@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <!-- Tek meta, media niteliği yok: tema işletim sistemi tercihinden bağımsız
+         olarak uygulama içinden değiştirilebiliyor, rengi de JS güncelliyor. -->
+    <meta name="theme-color" content="#f5f2ed" />
+    <meta
+      name="description"
+      content="Kelimeleri tek tek gösteren, sade ve göz yormayan bir hızlı okuma (RSVP) uygulaması."
+    />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/icon-192.png" />
+    <title>Hızlı Okuma Pratik Yap</title>
+    <script>
+      // Tema, React yüklenmeden uygulanır — böylece açılışta beyaz parlama olmaz.
+      try {
+        var saved = localStorage.getItem('hizliokuma.theme.v1');
+        var dark =
+          saved === 'dark' ||
+          (saved !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) {
+          document.documentElement.classList.add('dark');
+          document.querySelector('meta[name="theme-color"]').content = '#12161d';
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
