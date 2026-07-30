@@ -11,12 +11,115 @@
     <meta name="theme-color" content="#f5f2ed" />
     <meta
       name="description"
-      content="Kelimeleri tek tek gösteren, sade ve göz yormayan bir hızlı okuma (RSVP) uygulaması."
+      content="Ücretsiz hızlı okuma uygulaması. Kelimeleri tek tek gösteren RSVP yöntemiyle okuma hızını artır. Kayıt yok, kurulum yok, tarayıcıda çalışır."
     />
+    <link rel="canonical" href="https://hiziralieldeniz1234-hub.github.io/hizli-okuma/" />
+
+    <!-- Link paylaşıldığında (WhatsApp, Discord, X, Telegram) görünecek önizleme -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="Hızlı Okuma Pratik Yap" />
+    <meta property="og:title" content="Hızlı Okuma Pratik Yap — Ücretsiz RSVP Okuma Uygulaması" />
+    <meta
+      property="og:description"
+      content="Kelimeleri tek tek gösteren, sade ve göz yormayan bir hızlı okuma aracı. Metnini yapıştır, hızını ayarla, okumaya başla."
+    />
+    <meta property="og:url" content="https://hiziralieldeniz1234-hub.github.io/hizli-okuma/" />
+    <meta
+      property="og:image"
+      content="https://hiziralieldeniz1234-hub.github.io/hizli-okuma/icons/icon-512.png"
+    />
+    <meta name="twitter:card" content="summary" />
+
     <link rel="icon" type="image/png" href="./icons/icon-192.png" />
     <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="apple-touch-icon" href="./icons/icon-192.png" />
-    <title>Hızlı Okuma Pratik Yap</title>
+    <title>Hızlı Okuma Pratik Yap — Ücretsiz RSVP Okuma Uygulaması</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Hızlı Okuma Pratik Yap",
+        "url": "https://hiziralieldeniz1234-hub.github.io/hizli-okuma/",
+        "description": "Kelimeleri tek tek gösteren RSVP yöntemiyle okuma hızını artırmanı sağlayan ücretsiz web uygulaması. Kayıt gerekmez, tarayıcıda çalışır.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "tr",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" }
+      }
+    </script>
+
+    <style>
+      .hakkinda {
+        max-width: 62ch;
+        margin: 0 auto;
+        padding: 4rem 1.5rem 5rem;
+        font-family: inherit;
+        color: #2b2725;
+        line-height: 1.7;
+        font-size: 1rem;
+        text-align: left;
+      }
+      .hakkinda h2 {
+        font-size: 1.35rem;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        margin: 2.75rem 0 0.75rem;
+        padding-top: 2.75rem;
+        border-top: 1px solid #e2dbd2;
+      }
+      .hakkinda h2:first-of-type {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: 0;
+      }
+      .hakkinda h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 1.75rem 0 0.4rem;
+      }
+      .hakkinda p {
+        margin: 0 0 1rem;
+      }
+      .hakkinda ol {
+        margin: 0 0 1rem;
+        padding-left: 1.25rem;
+      }
+      .hakkinda li {
+        margin-bottom: 0.6rem;
+      }
+      .hakkinda .kunye {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #e2dbd2;
+        font-size: 0.875rem;
+        color: #6b625c;
+      }
+
+      /* Karanlık tema */
+      .dark .hakkinda {
+        color: #d8dde4;
+      }
+      .dark .hakkinda h2,
+      .dark .hakkinda .kunye {
+        border-top-color: #232a34;
+      }
+      .dark .hakkinda .kunye {
+        color: #8d97a5;
+      }
+
+      @media (max-width: 480px) {
+        .hakkinda {
+          padding: 3rem 1.25rem 4rem;
+        }
+        .hakkinda h2 {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+
     <script>
       // Tema, React yüklenmeden uygulanır — böylece açılışta beyaz parlama olmaz.
       try {
@@ -33,6 +136,111 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <section class="hakkinda">
+      <h2>Hızlı okuma pratiği nedir?</h2>
+
+      <p>
+        Bu sayfa, okuma hızını artırmak için kullanabileceğin ücretsiz bir alıştırma aracıdır.
+        Yapıştırdığın metni kelime kelime, sabit bir noktada ve senin ayarladığın hızda gösterir.
+        Kayıt olman ya da bir şey indirmen gerekmez; doğrudan tarayıcında çalışır.
+      </p>
+
+      <p>
+        Kullanılan yönteme <strong>RSVP</strong> deniyor (Rapid Serial Visual Presentation, yani
+        hızlı ardışık görsel sunum). Normalde okurken gözün satır boyunca sıçrayarak ilerler ve her
+        sıçrama zaman kaybettirir. Kelimeler tek tek aynı noktada belirdiğinde göz hareket etmek
+        zorunda kalmaz, sadece okur.
+      </p>
+
+      <h2>Nasıl kullanılır?</h2>
+
+      <ol>
+        <li>
+          <strong>Metnini yapıştır.</strong> Bir ders notu, makale, kitap bölümü ya da haber metni
+          olabilir.
+        </li>
+        <li>
+          <strong>Hızı ayarla.</strong> Dakikadaki kelime sayısını (WPM) rahat okuduğun bir yerden
+          başlat. Çoğu kişi için bu 200–250 civarıdır.
+        </li>
+        <li>
+          <strong>Başlat ve takip et.</strong> Kelimeleri geri sarmadan, ekranın ortasına
+          odaklanarak izle.
+        </li>
+        <li>
+          <strong>Kademeli artır.</strong> Bir metni rahat bitirdiğinde hızı 25–50 WPM artır.
+          Anladığını hissetmediğin noktada bir kademe geri in.
+        </li>
+      </ol>
+
+      <p>
+        Günde 10–15 dakika düzenli çalışmak, haftada bir kez uzun süre çalışmaktan çok daha çok işe
+        yarar.
+      </p>
+
+      <h2>Ne kadar hızlanılabilir?</h2>
+
+      <p>
+        Yetişkin bir okuyucunun ortalama hızı dakikada 200–250 kelime civarındadır. Düzenli
+        pratikle bunu 400–500 aralığına çıkarmak çoğu kişi için ulaşılabilir bir hedeftir.
+      </p>
+
+      <p>
+        Ama dürüst olalım: dakikada binlerce kelime vaat eden kurslara temkinli yaklaş.
+        Araştırmalar, hız belli bir noktayı geçtiğinde anlama oranının düştüğünü gösteriyor. Bu
+        aracın amacı metni anlamadan geçmek değil,
+        <strong>seni gereksiz yere yavaşlatan alışkanlıklardan kurtulmak</strong>: içinden
+        seslendirerek okumak, aynı satıra defalarca geri dönmek, gözün satır aralarında oyalanması
+        gibi.
+      </p>
+
+      <p>Kısacası hedef, anladığın hızın tavanını yükseltmek. Anlamadan hızlanmak değil.</p>
+
+      <h2>Kimler için uygun?</h2>
+
+      <p>
+        Sınava hazırlanan öğrenciler (YKS, KPSS, ALES ve benzeri), çok sayıda ders notu ya da makale
+        okuması gereken üniversite öğrencileri, iş yerinde rapor ve doküman yığınıyla uğraşanlar ve
+        sadece daha çok kitap okumak isteyen herkes için uygundur.
+      </p>
+
+      <p>
+        Dikkatini toplamakta zorlanıyorsan da işine yarayabilir; kelimeler tek tek geldiği için
+        gözün sayfada kaybolması zorlaşır.
+      </p>
+
+      <h2>Sık sorulan sorular</h2>
+
+      <h3>Ücretli mi?</h3>
+      <p>Hayır. Tamamen ücretsiz ve kayıt istemiyor.</p>
+
+      <h3>Metinlerim bir yere kaydediliyor mu?</h3>
+      <p>Hayır. Yapıştırdığın metin tarayıcının içinde işlenir, bir sunucuya gönderilmez.</p>
+
+      <h3>Telefonda çalışır mı?</h3>
+      <p>
+        Evet. Telefon, tablet ve bilgisayarda çalışır. Telefonda tarayıcı menüsünden ana ekrana
+        ekleyerek uygulama gibi de kullanabilirsin.
+      </p>
+
+      <h3>Hangi hızdan başlamalıyım?</h3>
+      <p>
+        Zorlanmadan takip edebildiğin bir hızdan. Genelde 200–250 WPM iyi bir başlangıçtır.
+        Yorulduğunu hissediyorsan düşür; ilk hedef hızlanmak değil, alışmak.
+      </p>
+
+      <h3>Anlamadan geçtiğimi hissediyorum, normal mi?</h3>
+      <p>
+        İlk günlerde normal. Beyin yeni ritme alışana kadar birkaç oturum geçmesi gerekiyor. Bu his
+        devam ediyorsa hızı bir kademe düşür ve orada birkaç gün kal.
+      </p>
+
+      <div class="kunye">
+        <p>Hızlı Okuma Pratik Yap — ücretsiz, açık kaynak RSVP okuma aracı.</p>
+      </div>
+    </section>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
